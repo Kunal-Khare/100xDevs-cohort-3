@@ -1,0 +1,46 @@
+<!--
+
+<html>
+
+<body>
+    <input type="text"/>
+    <button onClick = "addTodo()">Add todo! </button>
+</body>
+<SCript>
+    function addTodo() {
+        const inputEl = document.querySelector("input");
+        const value = inputEl.value;
+
+        const newDivEl = document.createElement("div");
+        newDivEl.innerHTML = "";
+
+        document.querySelector("body").appendChild(newDivEl)
+    }
+</SCript>
+
+
+
+</html>
+
+-->
+
+
+<html>
+<body>
+    <input type="text"/>
+    <button onClick="addTodo()">Add todo! </button>
+    <div id="todo-list"></div>
+
+<script>
+    function addTodo() {
+        const inputEl = document.querySelector("input");
+        const value = inputEl.value;
+
+        const newDivEl = document.createElement("div");
+        newDivEl.innerHTML = value;
+        document.getElementById("todo-list").appendChild(newDivEl);
+        inputEl.value = ""; // clear the input field
+    }
+</script>
+</body>
+</html>
