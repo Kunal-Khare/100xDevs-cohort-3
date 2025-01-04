@@ -6,8 +6,7 @@ import ParentComponent from "./parent.jsx";
 function App() {
   return (
     <>
-      <Card />
-     <ParentComponent/>
+    <Greeting />
     </>
   );
 }

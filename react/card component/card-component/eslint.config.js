@@ -36,3 +36,5 @@ export default [
     },
   },
 ]
+
+(recat from react import function )
