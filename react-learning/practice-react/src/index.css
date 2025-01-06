@@ -1,0 +1,47 @@
+.welcome-message{
+    font-size: medium;
+    font-family:  Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: hsl(112, 100%, 50%);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0;
+}
+.login-message{
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: hsl(0, 81%, 54%);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0;
+}
+
+.outdoor-games{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-weight: bold;
+    color: rgb(139, 51, 215);
+    padding: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    border: 3px solid;
+    border-radius: 50px;
+    background-color: aqua;
+
+}
+
+.online-games{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    color: hsl(0, 0%, 0%);
+    text-align: center;
+    margin: 0;
+
+
+
+}
+.online-games :hover{
+    color: hsl(275, 68%, 41%);
+    cursor: pointer;
+}
