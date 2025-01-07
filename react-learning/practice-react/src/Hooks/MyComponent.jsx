@@ -1,0 +1,21 @@
+/*
+
+react hook -> special function that allows functional components to use react features without writing class components
+              (useState , useEffect, useContext, useReducer, useCallback) 
+              
+              
+useState --> a react hookthat allows the creation of a stateful variable and a setter function to update its value in the virtual DOM.   [name,setName]              
+              */
+
+/*
+Why
+useState is used to add state management to functional components, allowing them to maintain and update state without needing to convert to class components.
+
+Where
+useState is used inside functional components in React. It is called at the top level of the component function.
+
+How
+Import useState from React.
+Call useState with an initial state value.
+Destructure the returned array to get the state variable and the setter function.
+*/
