@@ -19,3 +19,23 @@ Import useState from React.
 Call useState with an initial state value.
 Destructure the returned array to get the state variable and the setter function.
 */
+
+ import React, {useState} from 'react';
+function MyComponent(){
+
+    const [name,setName] = useState();
+
+    const updateName =()=>{
+     setName('Dexter');
+    }
+     return(
+        <div>
+
+        <p>Name : {name}</p>
+        <button onClick={updateName}>Setname</button>
+        </div>
+     )
+
+}
+
+export default MyComponent;
