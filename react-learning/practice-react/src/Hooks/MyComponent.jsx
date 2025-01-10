@@ -20,22 +20,29 @@ Call useState with an initial state value.
 Destructure the returned array to get the state variable and the setter function.
 */
 
- import React, {useState} from 'react';
-function MyComponent(){
+import React, { useState } from "react";
+function MyComponent() {
+  const [name, setName] = useState();
 
-    const [name,setName] = useState();
+  const updateName = () => {
+    setName("Dexter");
+  };
 
-    const updateName =()=>{
-     setName('Dexter');
-    }
-     return(
-        <div>
+  const [age, setAge] = useState(0);
 
-        <p>Name : {name}</p>
-        <button onClick={updateName}>Setname</button>
-        </div>
-     )
+  const increaseAge = () => {
+    setAge(age + 1);
+  };
 
+  return (
+    <div>
+      <p>Name : {name}</p>
+      <button onClick={updateName}>Setname</button>
+
+      <p>Age: {age}</p>
+      <button onClick={increaseAge}>Increase Age</button>
+    </div>
+  );
 }
 
 export default MyComponent;
