@@ -31,7 +31,7 @@ function MyComponent() {
   const [age, setAge] = useState(0);
 
   const increaseAge = () => {
-    setAge(age + 1);
+    setAge(age + 1);  
   };
 
   return (

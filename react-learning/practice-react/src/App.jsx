@@ -6,6 +6,7 @@ import Button from "./button/Button.jsx";
 import Profile from "./button/Profile.jsx";
 import MyComponent from "./Hooks/MyComponent.jsx";
 import Counter from "./Hooks/Counter.jsx";
+import Practise from "./Hooks/Practise.jsx";
 
 export default function App() {
   return (
@@ -16,6 +17,8 @@ export default function App() {
       <Profile />
       <MyComponent />
       <Counter />
+      <Practise />
+      
     </>
   );
 }
