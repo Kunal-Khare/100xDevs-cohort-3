@@ -8,6 +8,7 @@ import MyComponent from "./Hooks/MyComponent.jsx";
 import Counter from "./Hooks/Counter.jsx";
 import Practise from "./Hooks/Practise.jsx";
 import MyChange from "./onChange/MyChange.jsx";
+import Update from "./updater-function/Update.jsx";
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
       <MyComponent />
       <Counter />
       <MyChange />
+      <Update/>
       
     </>
   );
