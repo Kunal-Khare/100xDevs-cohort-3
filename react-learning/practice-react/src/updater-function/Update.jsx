@@ -11,9 +11,18 @@ function MyUpdate() {
 
   function increment() {
     //using the updater function
+    
+    /* setCount((prevCount) => prevCount + 1);
     setCount((prevCount) => prevCount + 1);
-    setCount((prevCount) => prevCount + 1);
-    setCount((prevCount) => prevCount + 1);
+    setCount((prevCount) => prevCount + 1); 
+    */
+
+    // alternate way
+    // we using 'c' instead of 'prevCount'
+
+    setCount(c => c+1); 
+    setCount(c=> c+1);
+    setCount(c=> c+1);
   };
 
   function decrement() {

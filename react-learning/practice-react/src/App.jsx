@@ -9,6 +9,7 @@ import Counter from "./Hooks/Counter.jsx";
 import Practise from "./Hooks/Practise.jsx";
 import MyChange from "./onChange/MyChange.jsx";
 import Update from "./updater-function/Update.jsx";
+import Toogle from "./updater-function/Toogle.jsx";
 
 export default function App() {
   return (
@@ -20,8 +21,8 @@ export default function App() {
       <MyComponent />
       <Counter />
       <MyChange />
-      <Update/>
-      
+      <Update />
+      <Toogle />
     </>
   );
 }
