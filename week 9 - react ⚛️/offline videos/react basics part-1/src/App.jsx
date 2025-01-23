@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import PostComponent from "./components/PostComponent";
+import Navbar from "./components/Navbar";
 
 function ToggleMessage() {
   const [notificationCount, setNotificationCount] = useState(0);
@@ -10,16 +12,16 @@ function ToggleMessage() {
   return (
     <div>
       <button onClick={increment}>Increase Notification</button>
-      {notificationCount}
+      <p>{notificationCount}</p>
     </div>
   );
 }
 
 function App() {
   return (
-    <div>
-      <ToggleMessage />
-    </div>
+    <>
+      <Navbar />
+    </>
   );
 }
 
