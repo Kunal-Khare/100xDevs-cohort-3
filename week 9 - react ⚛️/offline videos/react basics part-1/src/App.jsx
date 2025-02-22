@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import PostComponent from "./components/PostComponent";
 import Navbar from "./components/Navbar";
+import UseEffect from "./components/UseEffect";
 
 function ToggleMessage() {
   const [notificationCount, setNotificationCount] = useState(0);
@@ -21,6 +22,7 @@ function App() {
   return (
     <>
       <Navbar />
+      <UseEffect/>
     </>
   );
 }

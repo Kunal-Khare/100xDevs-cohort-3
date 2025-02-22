@@ -6,6 +6,8 @@ function Navbar() {
   function increment() {
     setCount(count + 1);
   }
+
+  setInterval(increment,1000);
   return (
     <div>
       <div style={{ display: "flex" }}>
@@ -16,9 +18,10 @@ function Navbar() {
         src={"https://cdn-icons-png.flaticon.com/512/3119/3119338.png"}
       />
 
-      <button onClick={increment}>increase count</button>
+  
     </div>
   );
 }
 
 export default Navbar;
+  
