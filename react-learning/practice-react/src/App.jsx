@@ -10,6 +10,7 @@ import Practise from "./Hooks/Practise.jsx";
 import MyChange from "./onChange/MyChange.jsx";
 import Update from "./updater-function/Update.jsx";
 import Toogle from "./updater-function/Toogle.jsx";
+import BgChanger from "./bgchanger/BgChanger.jsx";
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
       <MyChange />
       <Update />
       <Toogle />
+      <BgChanger/>
     </>
   );
 }

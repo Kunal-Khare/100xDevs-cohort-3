@@ -10,7 +10,7 @@ function UseEffect() {
   useEffect(function(){
     console.log("above setinterval")
     setInterval(increaseCount,1000);
-  },[])
+  },[]) // this effect will run on mount, because the array is empty. 
 
   return <div>
     {count}

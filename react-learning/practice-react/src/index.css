@@ -1,3 +1,4 @@
+@import "tailwindcss";
 .welcome-message{
     font-size: medium;
     font-family:  Haettenschweiler, 'Arial Narrow Bold', sans-serif;
