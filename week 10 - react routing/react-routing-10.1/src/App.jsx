@@ -1,6 +1,11 @@
 import React from "react";
+import Useref from "./Useref";
+
+//useRef --> it is used to access the dom element directly in react js,
+// reference to a value, such that when you change the value it does not RE-RENDER the component
+
 import {
-  BrowserRouter,
+  BrowserRouter, 
   Routes,
   Route,
   Link,
@@ -14,27 +19,20 @@ function App() {
     // we are using link and navlink for routed links
     // we cannot use <Link/> outside the browser router, we have to use the link inside BrowserRouter
     <div>
-      {/*
-      <a href="/">Allen</a>
-
-      <a href="/neet/online-coaching-class-11">Class 11</a>
-
-      <a href="/neet/online-coaching-class-12">Class 12</a>
-      */}
-
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
+            <Route index element={<Landing />} />
             <Route
-              path="/neet/online-coaching-class-11"
+              path="neet/online-coaching-class-11"
               element={<Class11Program />}
-            ></Route>
+            />
             <Route
-              path="/neet/online-coaching-class-12"
+              path="neet/online-coaching-class-12"
               element={<Class12Program />}
-            ></Route>
-            <Route path="/" element={<Landing />}></Route>
+            />
           </Route>
+          <Route path="sign up" element={<Useref />} />
         </Routes>
       </BrowserRouter>
     </div>
@@ -45,20 +43,21 @@ function Layout() {
   return (
     <div style={{ height: "100vh" }}>
       <Header />
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
+      <div style={{ display: "flex", justifyContent: "space-between", padding: "20px" }}>
         <Outlet />
       </div>
-      Footer | ContactUs
+      <div>Footer | ContactUs</div>
     </div>
   );
 }
 
 function Header() {
   return (
-    <div>
+    <div style={{ display: "flex", gap: "20px", padding: "10px" }}>
       <Link to="/">Allen</Link>
       <Link to="/neet/online-coaching-class-11">Class 11</Link>
       <Link to="/neet/online-coaching-class-12">Class 12</Link>
+      <Link to="sign up">Sign up</Link>
     </div>
   );
 }
@@ -66,7 +65,6 @@ function Header() {
 function Landing() {
   return (
     <div>
-      {" "}
       <h1>Welcome to Allen</h1>
     </div>
   );
@@ -81,8 +79,6 @@ function Class11Program() {
 }
 
 function Class12Program() {
-  // using useNavigate() hook--
-
   const navigate = useNavigate();
 
   function redirector() {
