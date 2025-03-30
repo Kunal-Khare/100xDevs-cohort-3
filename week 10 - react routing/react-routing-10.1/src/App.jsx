@@ -1,11 +1,12 @@
 import React from "react";
 import Useref from "./Useref";
+import Stopwatch from "./Stopwatch";
 
 //useRef --> it is used to access the dom element directly in react js,
 // reference to a value, such that when you change the value it does not RE-RENDER the component
 
 import {
-  BrowserRouter, 
+  BrowserRouter,
   Routes,
   Route,
   Link,
@@ -18,24 +19,29 @@ function App() {
     // we cannot use a tag for routing so we are using link and navlink
     // we are using link and navlink for routed links
     // we cannot use <Link/> outside the browser router, we have to use the link inside BrowserRouter
+    <>
     <div>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Landing />} />
-            <Route
-              path="neet/online-coaching-class-11"
-              element={<Class11Program />}
-            />
-            <Route
-              path="neet/online-coaching-class-12"
-              element={<Class12Program />}
-            />
-          </Route>
-          <Route path="sign up" element={<Useref />} />
-        </Routes>
-      </BrowserRouter>
+      <Stopwatch />
     </div>
+      <div>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route index element={<Landing />} />
+              <Route
+                path="neet/online-coaching-class-11"
+                element={<Class11Program />}
+              />
+              <Route
+                path="neet/online-coaching-class-12"
+                element={<Class12Program />}
+              />
+            </Route>
+            <Route path="sign up" element={<Useref />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
+    </>
   );
 }
 
@@ -43,7 +49,13 @@ function Layout() {
   return (
     <div style={{ height: "100vh" }}>
       <Header />
-      <div style={{ display: "flex", justifyContent: "space-between", padding: "20px" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          padding: "20px",
+        }}
+      >
         <Outlet />
       </div>
       <div>Footer | ContactUs</div>
