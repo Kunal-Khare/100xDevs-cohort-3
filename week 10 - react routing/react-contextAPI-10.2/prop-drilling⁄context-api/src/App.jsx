@@ -1,13 +1,20 @@
-// Prop-Drilling 
+// Prop-Drilling
 
 import React, { useState } from "react";
+import ContextApi from "./ContextApi";
 
 function App() {
   const [bulbOn, setbulbOn] = useState(false);
 
   return (
     <div>
-      <Light bulbOn={bulbOn} setbulbOn={setbulbOn} />
+      <div>
+        <Light bulbOn={bulbOn} setbulbOn={setbulbOn} />
+      </div>
+
+      <div>
+        <ContextApi />
+      </div>
     </div>
   );
 }
@@ -37,9 +44,9 @@ function LightBulb({ bulbOn }) {
   );
 }
 
-function LightSwitch({setbulbOn}) {
+function LightSwitch({ setbulbOn }) {
   function toogle() {
-    setbulbOn(currentState => !currentState);
+    setbulbOn((currentState) => !currentState);
   }
   return <button onClick={toogle}>Switch</button>;
 }
