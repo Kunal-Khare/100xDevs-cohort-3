@@ -1,19 +1,14 @@
+import React, {useRef, useEffect} from 'react'
 
-import {useeffect, useRef} from "react";
+function useprev(value) {
+  const ref = useRef();
 
-
-export const usePrev = (value) => {
-    const ref = useRef();
-    useEffect();
-
-    console.log("re-render happened with new value" + value)
-
-
-useEffect(() =>{
-    console.log("useEffect called" + value);
+  useEffect(() => {
     ref.current = value;
-},[value])
+  
+  },[value] )
 
-console.log("returned " + ref.current) ;
-return ref.current;
+  return ref.current;
 }
+
+export default useprev
