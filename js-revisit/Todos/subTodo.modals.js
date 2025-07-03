@@ -15,6 +15,10 @@ const todoSchema = new mongoose.Schema({
     createdBy:{
        type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
+    },
+    subTodo:{
+        type: mongoose.schema.Types.ObjectedId,
+        ref:'SubTodo'
     }
 }, {timestamps: true})
 
